@@ -1,5 +1,9 @@
 # 🇵🇭 Philippine Income Tax Calculator - TRAIN Law 2025
-philippine-income-tax-calculator: Calculate your Philippine Income Tax (ITR) instantly for the current year based on the TRAIN Law (Tax Reform for Acceleration and Inclusion). Fast, accurate, and free calculator for salaried employees.
+
+---
+## 🚀 **[https://cmacaltao.github.io/philippine-income-tax-calculator/](https://cmacaltao.github.io/philippine-income-tax-calculator/)**
+---
+Calculate your Philippine Income Tax (ITR) instantly for the current year based on the TRAIN Law (Tax Reform for Acceleration and Inclusion). Fast, accurate, and free calculator for salaried employees.
 
 This document outlines the **Annual Income Tax (ITR) Brackets** and **Non-Taxable Benefits** for individuals in the Philippines, effective January 1, 2023, and continuing for the year **2025**, as mandated by the **TRAIN Law (Republic Act No. 10963)**.
 
