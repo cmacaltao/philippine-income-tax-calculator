@@ -678,6 +678,316 @@
     .num-animate {
       animation: number-in 0.4s ease both;
     }
+
+    /* ── INTELLIGENCE SECTION ── */
+    .intel-section {
+      margin-top: 48px;
+    }
+
+    /* ── PERCENTILE CARD ── */
+    .percentile-card {
+      background: linear-gradient(135deg, rgba(124,77,255,0.06) 0%, rgba(13,6,48,0.9) 100%);
+      border: 1px solid rgba(124,77,255,0.2);
+      padding: 28px 28px 24px;
+      margin-bottom: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+    .percentile-card::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 240px; height: 240px;
+      background: radial-gradient(circle, rgba(124,77,255,0.07) 0%, transparent 70%);
+    }
+    .percentile-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 6vw, 52px);
+      font-weight: 300;
+      color: var(--star-white);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .percentile-headline em { color: var(--glow-violet); font-style: italic; }
+    .percentile-sub {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-bottom: 24px;
+      letter-spacing: 0.05em;
+    }
+    /* Track bar */
+    .percentile-track {
+      position: relative;
+      height: 3px;
+      background: rgba(255,255,255,0.06);
+      margin-bottom: 8px;
+    }
+    .percentile-fill {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      background: linear-gradient(90deg, var(--accent), var(--glow-violet), var(--glow-blue));
+      transition: width 1s cubic-bezier(0.23,1,0.32,1);
+      width: 0%;
+    }
+    .percentile-fill::after {
+      content: '';
+      position: absolute;
+      right: -1px; top: 50%;
+      transform: translateY(-50%);
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--glow-blue);
+      box-shadow: 0 0 10px 3px rgba(79,195,247,0.5);
+    }
+    .percentile-labels {
+      display: flex;
+      justify-content: space-between;
+      font-family: 'Syncopate', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.2em;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+    }
+    .percentile-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding-top: 20px;
+    }
+    @media (max-width: 500px) { .percentile-stats { grid-template-columns: 1fr; } }
+    .pstat { text-align: center; }
+    .pstat-value {
+      font-family: 'DM Mono', monospace;
+      font-size: 16px;
+      color: var(--glow-violet);
+      margin-bottom: 4px;
+    }
+    .pstat-label {
+      font-family: 'Syncopate', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+    }
+
+    /* ── METRICS GRID ── */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 500px) { .metrics-grid { grid-template-columns: 1fr; } }
+
+    .metric-card {
+      background: linear-gradient(135deg, rgba(13,6,48,0.8) 0%, rgba(26,10,61,0.4) 100%);
+      border: 1px solid rgba(255,255,255,0.06);
+      padding: 20px;
+      position: relative;
+      overflow: hidden;
+      transition: border-color 0.3s;
+    }
+    .metric-card:hover { border-color: rgba(79,195,247,0.15); }
+    .metric-card-icon {
+      font-size: 22px;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .metric-card-label {
+      font-family: 'Syncopate', sans-serif;
+      font-size: 8px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 6px;
+    }
+    .metric-card-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .metric-card-value.blue { color: var(--glow-blue); }
+    .metric-card-value.gold { color: var(--glow-gold); }
+    .metric-card-value.green { color: var(--data-green); }
+    .metric-card-value.violet { color: var(--glow-violet); }
+    .metric-card-desc {
+      font-size: 10px;
+      color: var(--text-dim);
+      line-height: 1.6;
+      letter-spacing: 0.03em;
+    }
+    .metric-card-accent {
+      position: absolute;
+      top: 0; right: 0;
+      width: 60px; height: 60px;
+      border-radius: 0 0 0 60px;
+      opacity: 0.07;
+    }
+    .metric-card-accent.blue { background: var(--glow-blue); }
+    .metric-card-accent.gold { background: var(--glow-gold); }
+    .metric-card-accent.green { background: var(--data-green); }
+    .metric-card-accent.violet { background: var(--glow-violet); }
+
+    /* ── LIFESTYLE CARD (full-width) ── */
+    .lifestyle-card {
+      background: linear-gradient(135deg, rgba(255,213,79,0.04) 0%, rgba(13,6,48,0.9) 100%);
+      border: 1px solid rgba(255,213,79,0.12);
+      padding: 24px 28px;
+      margin-bottom: 12px;
+    }
+    .lifestyle-title {
+      font-family: 'Syncopate', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--glow-gold);
+      margin-bottom: 20px;
+    }
+    .lifestyle-items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    @media (max-width: 600px) { .lifestyle-items { grid-template-columns: repeat(2, 1fr); } }
+    .litem {
+      text-align: center;
+      padding: 14px 8px;
+      border: 1px solid rgba(255,213,79,0.08);
+      background: rgba(255,213,79,0.02);
+      transition: border-color 0.3s;
+    }
+    .litem:hover { border-color: rgba(255,213,79,0.2); }
+    .litem-emoji { font-size: 24px; margin-bottom: 8px; display: block; }
+    .litem-count {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      font-weight: 300;
+      color: var(--glow-gold);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .litem-name {
+      font-family: 'Syncopate', sans-serif;
+      font-size: 7px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      line-height: 1.4;
+    }
+
+    /* ── TRAJECTORY CARD ── */
+    .trajectory-card {
+      background: linear-gradient(135deg, rgba(105,240,174,0.04) 0%, rgba(13,6,48,0.9) 100%);
+      border: 1px solid rgba(105,240,174,0.12);
+      padding: 24px 28px;
+      margin-bottom: 12px;
+    }
+    .trajectory-title {
+      font-family: 'Syncopate', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--data-green);
+      margin-bottom: 20px;
+    }
+    .trajectory-rows { display: flex; flex-direction: column; gap: 0; }
+    .traj-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(105,240,174,0.06);
+    }
+    .traj-row:last-child { border-bottom: none; }
+    .traj-year {
+      font-family: 'Syncopate', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.2em;
+      color: var(--text-dim);
+      min-width: 56px;
+    }
+    .traj-bar-wrap {
+      flex: 1;
+      height: 2px;
+      background: rgba(255,255,255,0.05);
+      position: relative;
+    }
+    .traj-bar {
+      position: absolute;
+      left: 0; top: 0; height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--data-green));
+      transition: width 1.2s cubic-bezier(0.23,1,0.32,1);
+    }
+    .traj-amount {
+      font-family: 'DM Mono', monospace;
+      font-size: 13px;
+      color: var(--data-green);
+      min-width: 120px;
+      text-align: right;
+    }
+    .traj-note {
+      font-size: 10px;
+      color: var(--text-dim);
+      min-width: 80px;
+      text-align: right;
+    }
+
+    /* ── TAX NATION CARD ── */
+    .nation-card {
+      background: linear-gradient(135deg, rgba(79,195,247,0.04) 0%, rgba(13,6,48,0.9) 100%);
+      border: 1px solid rgba(79,195,247,0.12);
+      padding: 24px 28px;
+    }
+    .nation-title {
+      font-family: 'Syncopate', sans-serif;
+      font-size: 9px;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--glow-blue);
+      margin-bottom: 8px;
+    }
+    .nation-desc {
+      font-size: 11px;
+      color: var(--text-dim);
+      margin-bottom: 20px;
+      line-height: 1.7;
+    }
+    .nation-items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 500px) { .nation-items { grid-template-columns: 1fr; } }
+    .nitem {
+      text-align: center;
+      padding: 16px 8px;
+      border: 1px solid rgba(79,195,247,0.08);
+      background: rgba(79,195,247,0.02);
+    }
+    .nitem-icon { font-size: 20px; margin-bottom: 8px; display: block; }
+    .nitem-count {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--glow-blue);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .nitem-label {
+      font-family: 'Syncopate', sans-serif;
+      font-size: 7px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      line-height: 1.4;
+    }
+
+    @keyframes fill-bar {
+      from { width: 0; }
+    }
   </style>
 </head>
 <body>
@@ -980,6 +1290,156 @@
         </div>
       </div>
 
+      <!-- ═══════════ WORKFORCE INTELLIGENCE ═══════════ -->
+      <div class="intel-section">
+
+        <div class="divider"></div>
+        <div class="section-meta" style="margin-bottom:24px;">
+          <span class="section-label">◈ Workforce Intelligence</span>
+          <div class="section-line"></div>
+        </div>
+
+        <!-- PERCENTILE CARD -->
+        <div class="percentile-card">
+          <div class="percentile-headline" id="percentileHeadline">You are in the <em>top —%</em></div>
+          <div class="percentile-sub" id="percentileSub">of the Philippine employed workforce by gross monthly income</div>
+          <div class="percentile-track">
+            <div class="percentile-fill" id="percentileFill"></div>
+          </div>
+          <div class="percentile-labels">
+            <span>0%</span><span>25%</span><span>50%</span><span>75%</span><span>100%</span>
+          </div>
+          <div class="percentile-stats">
+            <div class="pstat">
+              <div class="pstat-value" id="pVsAvg">—</div>
+              <div class="pstat-label">vs. national average</div>
+            </div>
+            <div class="pstat">
+              <div class="pstat-value" id="pVsMinWage">—</div>
+              <div class="pstat-label">vs. NCR min wage</div>
+            </div>
+            <div class="pstat">
+              <div class="pstat-value" id="pWorkersBehind">—</div>
+              <div class="pstat-label">workers earning less</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TIME & VALUE METRICS -->
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-card-accent blue"></div>
+            <span class="metric-card-icon">⏱️</span>
+            <div class="metric-card-label">Effective Hourly Rate</div>
+            <div class="metric-card-value blue" id="metricHourly">—</div>
+            <div class="metric-card-desc">What you actually take home per hour worked (8 hrs/day, 22 days/month, net of all deductions)</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-accent gold"></div>
+            <span class="metric-card-icon">📅</span>
+            <div class="metric-card-label">Tax Freedom Day</div>
+            <div class="metric-card-value gold" id="metricTaxDay">—</div>
+            <div class="metric-card-desc" id="metricTaxDayDesc">The day of the year you stop working for the government and start working for yourself</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-accent green"></div>
+            <span class="metric-card-icon">💰</span>
+            <div class="metric-card-label">Annual Savings Potential</div>
+            <div class="metric-card-value green" id="metricSavings">—</div>
+            <div class="metric-card-desc">If you followed the 20/30/50 rule and saved 20% of your monthly net pay every month</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-card-accent violet"></div>
+            <span class="metric-card-icon">🚀</span>
+            <div class="metric-card-label">Months to ₱1,000,000</div>
+            <div class="metric-card-value violet" id="metricToMillion">—</div>
+            <div class="metric-card-desc">Saving 20% of net monthly take-home. No investment returns assumed — purely disciplined saving</div>
+          </div>
+        </div>
+
+        <!-- LIFESTYLE BENCHMARKS -->
+        <div class="lifestyle-card">
+          <div class="lifestyle-title">◈ Monthly Net Pay in the Real World</div>
+          <div class="lifestyle-items">
+            <div class="litem">
+              <span class="litem-emoji">☕</span>
+              <div class="litem-count" id="lifeCoffee">—</div>
+              <div class="litem-name">Starbucks Grande Lattes<br>at ₱195 each</div>
+            </div>
+            <div class="litem">
+              <span class="litem-emoji">🍗</span>
+              <div class="litem-count" id="lifeChicken">—</div>
+              <div class="litem-name">Jollibee Chickenjoy<br>at ₱79 each</div>
+            </div>
+            <div class="litem">
+              <span class="litem-emoji">⛽</span>
+              <div class="litem-count" id="lifeGas">—</div>
+              <div class="litem-name">Liters of Gasoline<br>at ₱64 per liter</div>
+            </div>
+            <div class="litem">
+              <span class="litem-emoji">🏡</span>
+              <div class="litem-count" id="lifeRent">—</div>
+              <div class="litem-name">Months of NCR avg. rent<br>at ₱10,000/mo</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SAVINGS TRAJECTORY -->
+        <div class="trajectory-card">
+          <div class="trajectory-title">◈ Wealth Trajectory — Saving 20% of Net Pay</div>
+          <div class="trajectory-rows">
+            <div class="traj-row">
+              <div class="traj-year">1 Year</div>
+              <div class="traj-bar-wrap"><div class="traj-bar" id="trajBar1" style="width:0%"></div></div>
+              <div class="traj-amount" id="trajAmt1">—</div>
+              <div class="traj-note" id="trajNote1"></div>
+            </div>
+            <div class="traj-row">
+              <div class="traj-year">3 Years</div>
+              <div class="traj-bar-wrap"><div class="traj-bar" id="trajBar3" style="width:0%"></div></div>
+              <div class="traj-amount" id="trajAmt3">—</div>
+              <div class="traj-note" id="trajNote3"></div>
+            </div>
+            <div class="traj-row">
+              <div class="traj-year">5 Years</div>
+              <div class="traj-bar-wrap"><div class="traj-bar" id="trajBar5" style="width:0%"></div></div>
+              <div class="traj-amount" id="trajAmt5">—</div>
+              <div class="traj-note" id="trajNote5"></div>
+            </div>
+            <div class="traj-row">
+              <div class="traj-year">10 Years</div>
+              <div class="traj-bar-wrap"><div class="traj-bar" id="trajBar10" style="width:0%"></div></div>
+              <div class="traj-amount" id="trajAmt10">—</div>
+              <div class="traj-note" id="trajNote10"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- YOUR TAXES IN ACTION -->
+        <div class="nation-card">
+          <div class="nation-title">◈ Your Annual Taxes in Action</div>
+          <div class="nation-desc">Every peso you pay in income tax funds public services. Here's what your annual income tax contribution approximately covers.</div>
+          <div class="nation-items">
+            <div class="nitem">
+              <span class="nitem-icon">📚</span>
+              <div class="nitem-count" id="nationTeachers">—</div>
+              <div class="nitem-label">DepEd teacher<br>monthly salaries</div>
+            </div>
+            <div class="nitem">
+              <span class="nitem-icon">🏥</span>
+              <div class="nitem-count" id="nationHospital">—</div>
+              <div class="nitem-label">PhilHealth<br>hospital bed-days</div>
+            </div>
+            <div class="nitem">
+              <span class="nitem-icon">🛣️</span>
+              <div class="nitem-count" id="nationRoad">—</div>
+              <div class="nitem-label">meters of barangay<br>road paved</div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /intel-section -->
+
     </section>
 
   </div><!-- /page-wrap -->
@@ -1179,6 +1639,155 @@
         rf.classList.add('animate');
         rf.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }, 30);
+
+      // ── WORKFORCE INTELLIGENCE ──
+      updateIntelligence(gross, netPay, annualTax);
+    }
+
+    /* ── PERCENTILE LOOKUP ──
+       Approximate PSA income distribution for employed Filipinos (monthly gross).
+       Sources: PSA Family Income & Expenditure Survey, DOLE wage data.
+       Returns the bottom-% of workers this income is above. */
+    function getPercentile(monthlyGross) {
+      const bands = [
+        { max: 5000,   pct: 8  },
+        { max: 8000,   pct: 18 },
+        { max: 10000,  pct: 28 },
+        { max: 13000,  pct: 40 },
+        { max: 16000,  pct: 52 },
+        { max: 20000,  pct: 62 },
+        { max: 25000,  pct: 70 },
+        { max: 30000,  pct: 76 },
+        { max: 40000,  pct: 82 },
+        { max: 50000,  pct: 86 },
+        { max: 70000,  pct: 90 },
+        { max: 100000, pct: 94 },
+        { max: 150000, pct: 97 },
+        { max: 300000, pct: 99 },
+        { max: Infinity, pct: 99.5 }
+      ];
+      const band = bands.find(b => monthlyGross <= b.max);
+      return band ? band.pct : 99.5;
+    }
+
+    function fmtCompact(n) {
+      if (n >= 1e9) return '₱' + (n/1e9).toFixed(2) + 'B';
+      if (n >= 1e6) return '₱' + (n/1e6).toFixed(2) + 'M';
+      if (n >= 1e3) return '₱' + (n/1e3).toFixed(1) + 'K';
+      return '₱' + n.toFixed(0);
+    }
+
+    function updateIntelligence(gross, netPay, annualTax) {
+      const NATIONAL_AVG   = 18000;  // PSA 2023 avg monthly wage
+      const NCR_MIN_WAGE   = 645 * 22; // ₱645/day × 22 days = ~₱14,190
+      const PH_WORKFORCE   = 49_000_000; // PSA 2024 employed persons
+
+      // ── PERCENTILE ──
+      const pct = getPercentile(gross);
+      const topPct = (100 - pct).toFixed(1);
+      document.getElementById('percentileHeadline').innerHTML =
+        `You are in the <em>top ${topPct}%</em>`;
+      document.getElementById('percentileSub').textContent =
+        `of the Philippine employed workforce by gross monthly income`;
+
+      // Animate fill bar (fill = how far along the population you are)
+      setTimeout(() => {
+        document.getElementById('percentileFill').style.width = pct + '%';
+      }, 200);
+
+      // vs. national average
+      const vsAvg = gross / NATIONAL_AVG;
+      document.getElementById('pVsAvg').textContent =
+        vsAvg >= 1 ? `${vsAvg.toFixed(1)}× above` : `${(vsAvg*100).toFixed(0)}% of avg`;
+
+      // vs. min wage
+      const vsMin = gross / NCR_MIN_WAGE;
+      document.getElementById('pVsMinWage').textContent = `${vsMin.toFixed(1)}× min wage`;
+
+      // workers earning less (estimate)
+      const workersBehind = Math.round(PH_WORKFORCE * (pct / 100));
+      document.getElementById('pWorkersBehind').textContent =
+        workersBehind >= 1e6
+          ? `~${(workersBehind/1e6).toFixed(1)}M people`
+          : `~${(workersBehind/1e3).toFixed(0)}K people`;
+
+      // ── HOURLY RATE ──
+      const hoursPerMonth = 8 * 22;
+      const hourlyNet = netPay / hoursPerMonth;
+      document.getElementById('metricHourly').textContent = fmt(hourlyNet) + '/hr';
+
+      // ── TAX FREEDOM DAY ──
+      const annualGross = gross * 12;
+      const totalAnnualDeductions = annualTax + (netPay < gross ? (gross - netPay) * 12 : 0);
+      const taxDayOfYear = Math.round((annualTax / (annualGross || 1)) * 365);
+      const taxFreedomDate = new Date(new Date().getFullYear(), 0, 1 + taxDayOfYear);
+      const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      document.getElementById('metricTaxDay').textContent =
+        `${monthNames[taxFreedomDate.getMonth()]} ${taxFreedomDate.getDate()}`;
+      document.getElementById('metricTaxDayDesc').textContent =
+        `You work the first ${taxDayOfYear} days of the year (until ${monthNames[taxFreedomDate.getMonth()]} ${taxFreedomDate.getDate()}) just to pay your income tax.`;
+
+      // ── SAVINGS ──
+      const monthlySavings = netPay * 0.20;
+      document.getElementById('metricSavings').textContent = fmtCompact(monthlySavings * 12) + '/yr';
+
+      // ── MONTHS TO ₱1M ──
+      const moToMillion = monthlySavings > 0 ? Math.ceil(1000000 / monthlySavings) : '∞';
+      const moLabel = typeof moToMillion === 'number'
+        ? (moToMillion > 120 ? `${(moToMillion/12).toFixed(1)} yrs` : `${moToMillion} months`)
+        : '∞';
+      document.getElementById('metricToMillion').textContent = moLabel;
+
+      // ── LIFESTYLE ──
+      document.getElementById('lifeCoffee').textContent  = Math.floor(netPay / 195).toLocaleString();
+      document.getElementById('lifeChicken').textContent = Math.floor(netPay / 79).toLocaleString();
+      document.getElementById('lifeGas').textContent     = Math.floor(netPay / 64).toLocaleString();
+      document.getElementById('lifeRent').textContent    = (netPay / 10000).toFixed(1) + 'x';
+
+      // ── SAVINGS TRAJECTORY (with 5% annual interest compounded monthly) ──
+      const r = 0.05 / 12;
+      function futureValue(mo) {
+        if (r === 0) return monthlySavings * mo;
+        return monthlySavings * ((Math.pow(1 + r, mo) - 1) / r);
+      }
+      const fv = [12, 36, 60, 120];
+      const labels = ['1 Year', '3 Years', '5 Years', '10 Years'];
+      const ids = [1, 3, 5, 10];
+      const maxFV = futureValue(120);
+      const milestones = { 1e6: '₱1M', 5e6: '₱5M', 10e6: '₱10M', 50e6: '₱50M', 100e6: '₱100M' };
+
+      fv.forEach((mo, i) => {
+        const val = futureValue(mo);
+        const barPct = maxFV > 0 ? Math.min(100, (val / maxFV) * 100) : 0;
+        document.getElementById(`trajAmt${ids[i]}`).textContent = fmtCompact(val);
+        setTimeout(() => {
+          document.getElementById(`trajBar${ids[i]}`).style.width = barPct + '%';
+        }, 300 + i * 120);
+
+        // milestone note
+        let note = '';
+        for (const [threshold, label] of Object.entries(milestones)) {
+          if (val >= parseFloat(threshold)) note = `${label}+ saved`;
+        }
+        document.getElementById(`trajNote${ids[i]}`).textContent = note;
+      });
+
+      // ── YOUR TAXES IN ACTION ──
+      // DepEd Teacher Salary Grade 11: ~₱27,000/mo
+      const teacherSalary = 27000;
+      const teacherMonths = annualTax > 0 ? Math.floor(annualTax / teacherSalary) : 0;
+      document.getElementById('nationTeachers').textContent =
+        teacherMonths > 0 ? `${teacherMonths}` : '<1';
+
+      // PhilHealth hospital bed-day coverage: ~₱2,500/day
+      const bedDays = annualTax > 0 ? Math.floor(annualTax / 2500) : 0;
+      document.getElementById('nationHospital').textContent =
+        bedDays >= 1000 ? `${(bedDays/1000).toFixed(1)}K` : `${bedDays}`;
+
+      // DPWH barangay road: ~₱6,500/meter
+      const roadMeters = annualTax > 0 ? Math.floor(annualTax / 6500) : 0;
+      document.getElementById('nationRoad').textContent =
+        roadMeters >= 1000 ? `${(roadMeters/1000).toFixed(1)}K` : `${roadMeters}`;
     }
 
     /* ── EVENTS ── */
