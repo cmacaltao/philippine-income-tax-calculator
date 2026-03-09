@@ -34,6 +34,7 @@
       overflow-x: hidden;
       cursor: none;
       min-height: 100vh;
+      font-size: 16px;
     }
 
     input[type="number"]::-webkit-inner-spin-button,
@@ -104,7 +105,7 @@
       animation: fade-up 0.8s forwards 0.3s;
     }
     .page-eyebrow {
-      font-size: 11px;
+      font-size: 13px;
       letter-spacing: 0.4em;
       color: var(--glow-blue);
       text-transform: uppercase;
@@ -130,7 +131,7 @@
     .page-title em { font-style: italic; color: var(--glow-violet); }
     .page-sub {
       font-family: 'Syncopate', sans-serif;
-      font-size: 11px;
+      font-size: 13px;
       letter-spacing: 0.35em;
       color: var(--text-dim);
       text-transform: uppercase;
@@ -138,7 +139,7 @@
     }
     .page-sub span { color: var(--glow-blue); }
     .page-desc {
-      font-size: 12px;
+      font-size: 15px;
       line-height: 1.9;
       color: var(--text-mid);
       max-width: 480px;
@@ -153,7 +154,7 @@
     }
     .section-label {
       font-family: 'Syncopate', sans-serif;
-      font-size: 10px;
+      font-size: 13px;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--glow-blue);
@@ -207,7 +208,7 @@
     .input-card label {
       display: block;
       font-family: 'Syncopate', sans-serif;
-      font-size: 9px;
+      font-size: 11px;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--text-dim);
@@ -221,27 +222,27 @@
       top: 50%;
       transform: translateY(-50%);
       color: var(--glow-blue);
-      font-size: 13px;
+      font-size: 15px;
       pointer-events: none;
     }
     .input-wrap input {
       width: 100%;
-      padding: 8px 0 8px 18px;
+      padding: 8px 0 8px 20px;
       background: transparent;
       border: none;
       border-bottom: 1px solid rgba(255,255,255,0.08);
       color: var(--star-white);
       font-family: 'DM Mono', monospace;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 400;
       outline: none;
       transition: border-color 0.3s;
     }
-    .input-wrap input::placeholder { color: var(--text-dim); font-size: 13px; }
+    .input-wrap input::placeholder { color: var(--text-dim); font-size: 15px; }
     .input-wrap input:focus { border-bottom-color: var(--glow-blue); }
 
     .input-hint {
-      font-size: 10px;
+      font-size: 13px;
       color: var(--text-dim);
       margin-top: 8px;
       line-height: 1.6;
@@ -256,9 +257,9 @@
       flex-wrap: wrap;
     }
     .quick-set button {
-      padding: 4px 10px;
+      padding: 5px 12px;
       font-family: 'DM Mono', monospace;
-      font-size: 10px;
+      font-size: 12px;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--text-dim);
@@ -281,9 +282,9 @@
     }
     .freq-tab {
       flex: 1;
-      padding: 10px 12px;
+      padding: 12px 12px;
       font-family: 'DM Mono', monospace;
-      font-size: 11px;
+      font-size: 13px;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--text-dim);
@@ -321,9 +322,9 @@
       margin-bottom: 14px;
     }
     .contrib-icon {
-      width: 28px; height: 28px;
+      width: 30px; height: 30px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 11px;
+      font-size: 13px;
       border: 1px solid;
     }
     .contrib-icon.sss      { border-color: rgba(124,77,255,0.4); color: var(--glow-violet); }
@@ -332,14 +333,14 @@
 
     .contrib-name {
       font-family: 'Syncopate', sans-serif;
-      font-size: 9px;
+      font-size: 11px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--text-mid);
     }
 
     .contrib-range {
-      font-size: 10px;
+      font-size: 13px;
       color: var(--text-dim);
       margin-top: 8px;
       letter-spacing: 0.05em;
@@ -347,7 +348,7 @@
 
     /* ── TOOLTIP ── */
     .tip { position: relative; display: inline-flex; cursor: none; }
-    .tip-icon { color: var(--text-dim); font-size: 10px; margin-left: 4px; }
+    .tip-icon { color: var(--text-dim); font-size: 13px; margin-left: 4px; }
     .tip-text {
       visibility: hidden;
       opacity: 0;
@@ -355,11 +356,11 @@
       bottom: calc(100% + 8px);
       left: 50%;
       transform: translateX(-50%);
-      width: 200px;
+      width: 220px;
       background: rgba(13,6,48,0.95);
       border: 1px solid rgba(79,195,247,0.15);
       color: var(--text-mid);
-      font-size: 10px;
+      font-size: 13px;
       line-height: 1.6;
       padding: 10px 12px;
       letter-spacing: 0.03em;
@@ -375,13 +376,13 @@
       align-items: center;
       gap: 6px;
       font-family: 'DM Mono', monospace;
-      font-size: 10px;
+      font-size: 13px;
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--text-dim);
       background: transparent;
       border: 1px solid rgba(255,255,255,0.06);
-      padding: 6px 14px;
+      padding: 7px 16px;
       cursor: none;
       transition: all 0.3s;
     }
@@ -394,11 +395,11 @@
     /* ── CALCULATE BUTTON ── */
     .calc-btn {
       width: 100%;
-      padding: 18px 24px;
+      padding: 20px 24px;
       margin-top: 8px;
       position: relative;
       font-family: 'DM Mono', monospace;
-      font-size: 12px;
+      font-size: 14px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--void);
@@ -414,7 +415,7 @@
     }
     .calc-btn::before {
       content: '✦';
-      font-size: 10px;
+      font-size: 12px;
       opacity: 0.7;
     }
     .calc-btn::after {
@@ -471,7 +472,7 @@
     }
     .net-hero-eyebrow {
       font-family: 'Syncopate', sans-serif;
-      font-size: 9px;
+      font-size: 13px;
       letter-spacing: 0.4em;
       text-transform: uppercase;
       color: var(--data-green);
@@ -495,7 +496,7 @@
       margin-bottom: 6px;
     }
     .net-hero-period {
-      font-size: 11px;
+      font-size: 14px;
       color: rgba(105,240,174,0.5);
       letter-spacing: 0.15em;
     }
@@ -522,7 +523,7 @@
     }
     .stat-label {
       font-family: 'Syncopate', sans-serif;
-      font-size: 8px;
+      font-size: 11px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--text-dim);
@@ -530,7 +531,7 @@
     }
     .stat-value {
       font-family: 'DM Mono', monospace;
-      font-size: 15px;
+      font-size: 17px;
       font-weight: 400;
     }
     .stat-card.red  .stat-value { color: var(--red-glow); }
@@ -545,9 +546,9 @@
       margin-bottom: 12px;
     }
     .breakdown-title {
-      padding: 12px 20px;
+      padding: 14px 20px;
       font-family: 'Syncopate', sans-serif;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--text-dim);
@@ -558,20 +559,20 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 12px 20px;
+      padding: 14px 20px;
       border-bottom: 1px solid rgba(255,255,255,0.04);
       transition: background 0.2s;
     }
     .breakdown-row:last-child { border-bottom: none; }
     .breakdown-row:hover { background: rgba(79,195,247,0.02); }
     .row-label {
-      font-size: 11px;
+      font-size: 14px;
       color: var(--text-mid);
       letter-spacing: 0.05em;
     }
     .row-value {
       font-family: 'DM Mono', monospace;
-      font-size: 12px;
+      font-size: 15px;
       color: var(--text-bright);
     }
     .row-value.deduct { color: var(--red-glow); }
@@ -586,7 +587,7 @@
     }
     .bracket-title {
       font-family: 'Syncopate', sans-serif;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--red-glow);
@@ -596,15 +597,15 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      padding: 8px 0;
+      padding: 10px 0;
       border-bottom: 1px solid rgba(255,107,138,0.07);
       gap: 16px;
     }
     .bracket-row:last-child { border-bottom: none; }
-    .bracket-row span:first-child { font-size: 11px; color: var(--text-mid); white-space: nowrap; }
+    .bracket-row span:first-child { font-size: 14px; color: var(--text-mid); white-space: nowrap; }
     .bracket-row span:last-child {
       font-family: 'DM Mono', monospace;
-      font-size: 11px;
+      font-size: 14px;
       color: var(--text-bright);
       text-align: right;
     }
@@ -616,7 +617,7 @@
     }
     .marginal-label {
       font-family: 'Syncopate', sans-serif;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: rgba(255,107,138,0.6);
@@ -639,7 +640,7 @@
       background: rgba(79,195,247,0.04);
       border: 1px solid rgba(79,195,247,0.12);
       padding: 18px 20px;
-      font-size: 12px;
+      font-size: 14px;
       color: var(--text-mid);
       line-height: 1.8;
     }
@@ -654,7 +655,7 @@
     }
     .section-meta-with-action .section-label {
       font-family: 'Syncopate', sans-serif;
-      font-size: 10px;
+      font-size: 13px;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--glow-blue);
@@ -710,7 +711,7 @@
     }
     .percentile-headline em { color: var(--glow-violet); font-style: italic; }
     .percentile-sub {
-      font-size: 11px;
+      font-size: 14px;
       color: var(--text-dim);
       margin-bottom: 24px;
       letter-spacing: 0.05em;
@@ -743,7 +744,7 @@
       display: flex;
       justify-content: space-between;
       font-family: 'Syncopate', sans-serif;
-      font-size: 8px;
+      font-size: 11px;
       letter-spacing: 0.2em;
       color: var(--text-dim);
       margin-bottom: 20px;
@@ -759,13 +760,13 @@
     .pstat { text-align: center; }
     .pstat-value {
       font-family: 'DM Mono', monospace;
-      font-size: 16px;
+      font-size: 17px;
       color: var(--glow-violet);
       margin-bottom: 4px;
     }
     .pstat-label {
       font-family: 'Syncopate', sans-serif;
-      font-size: 8px;
+      font-size: 11px;
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: var(--text-dim);
@@ -790,13 +791,13 @@
     }
     .metric-card:hover { border-color: rgba(79,195,247,0.15); }
     .metric-card-icon {
-      font-size: 22px;
+      font-size: 24px;
       margin-bottom: 12px;
       display: block;
     }
     .metric-card-label {
       font-family: 'Syncopate', sans-serif;
-      font-size: 8px;
+      font-size: 11px;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--text-dim);
@@ -804,7 +805,7 @@
     }
     .metric-card-value {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 28px;
+      font-size: 30px;
       font-weight: 300;
       line-height: 1.1;
       margin-bottom: 4px;
@@ -814,7 +815,7 @@
     .metric-card-value.green { color: var(--data-green); }
     .metric-card-value.violet { color: var(--glow-violet); }
     .metric-card-desc {
-      font-size: 10px;
+      font-size: 13px;
       color: var(--text-dim);
       line-height: 1.6;
       letter-spacing: 0.03em;
@@ -840,7 +841,7 @@
     }
     .lifestyle-title {
       font-family: 'Syncopate', sans-serif;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--glow-gold);
@@ -860,10 +861,10 @@
       transition: border-color 0.3s;
     }
     .litem:hover { border-color: rgba(255,213,79,0.2); }
-    .litem-emoji { font-size: 24px; margin-bottom: 8px; display: block; }
+    .litem-emoji { font-size: 26px; margin-bottom: 8px; display: block; }
     .litem-count {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 26px;
+      font-size: 28px;
       font-weight: 300;
       color: var(--glow-gold);
       line-height: 1;
@@ -871,11 +872,11 @@
     }
     .litem-name {
       font-family: 'Syncopate', sans-serif;
-      font-size: 7px;
+      font-size: 10px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--text-dim);
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
     /* ── TRAJECTORY CARD ── */
@@ -887,7 +888,7 @@
     }
     .trajectory-title {
       font-family: 'Syncopate', sans-serif;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--data-green);
@@ -898,16 +899,16 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      padding: 14px 0;
+      padding: 16px 0;
       border-bottom: 1px solid rgba(105,240,174,0.06);
     }
     .traj-row:last-child { border-bottom: none; }
     .traj-year {
       font-family: 'Syncopate', sans-serif;
-      font-size: 9px;
+      font-size: 11px;
       letter-spacing: 0.2em;
       color: var(--text-dim);
-      min-width: 56px;
+      min-width: 60px;
     }
     .traj-bar-wrap {
       flex: 1;
@@ -923,15 +924,15 @@
     }
     .traj-amount {
       font-family: 'DM Mono', monospace;
-      font-size: 13px;
+      font-size: 15px;
       color: var(--data-green);
       min-width: 120px;
       text-align: right;
     }
     .traj-note {
-      font-size: 10px;
+      font-size: 13px;
       color: var(--text-dim);
-      min-width: 80px;
+      min-width: 90px;
       text-align: right;
     }
 
@@ -943,14 +944,14 @@
     }
     .nation-title {
       font-family: 'Syncopate', sans-serif;
-      font-size: 9px;
+      font-size: 12px;
       letter-spacing: 0.35em;
       text-transform: uppercase;
       color: var(--glow-blue);
       margin-bottom: 8px;
     }
     .nation-desc {
-      font-size: 11px;
+      font-size: 14px;
       color: var(--text-dim);
       margin-bottom: 20px;
       line-height: 1.7;
@@ -967,10 +968,10 @@
       border: 1px solid rgba(79,195,247,0.08);
       background: rgba(79,195,247,0.02);
     }
-    .nitem-icon { font-size: 20px; margin-bottom: 8px; display: block; }
+    .nitem-icon { font-size: 22px; margin-bottom: 8px; display: block; }
     .nitem-count {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 22px;
+      font-size: 24px;
       font-weight: 300;
       color: var(--glow-blue);
       line-height: 1;
@@ -978,11 +979,11 @@
     }
     .nitem-label {
       font-family: 'Syncopate', sans-serif;
-      font-size: 7px;
+      font-size: 10px;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--text-dim);
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
     @keyframes fill-bar {
@@ -1008,7 +1009,6 @@
     <header class="page-header">
       <p class="page-eyebrow">BIR · TRAIN Law 2025</p>
       <h1 class="page-title">Philippine<br><em>Tax Calculator</em></h1>
-      <!-- <p class="page-sub">ianverse<span>.com</span> / tools</p> -->
       <p class="page-desc">Compute your take-home pay under the 2025 TRAIN Law schedule. Enter your income details and mandatory contributions below.</p>
     </header>
 
@@ -1640,14 +1640,9 @@
         rf.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }, 30);
 
-      // ── WORKFORCE INTELLIGENCE ──
       updateIntelligence(gross, netPay, annualTax);
     }
 
-    /* ── PERCENTILE LOOKUP ──
-       Approximate PSA income distribution for employed Filipinos (monthly gross).
-       Sources: PSA Family Income & Expenditure Survey, DOLE wage data.
-       Returns the bottom-% of workers this income is above. */
     function getPercentile(monthlyGross) {
       const bands = [
         { max: 5000,   pct: 8  },
@@ -1678,11 +1673,10 @@
     }
 
     function updateIntelligence(gross, netPay, annualTax) {
-      const NATIONAL_AVG   = 18000;  // PSA 2023 avg monthly wage
-      const NCR_MIN_WAGE   = 645 * 22; // ₱645/day × 22 days = ~₱14,190
-      const PH_WORKFORCE   = 49_000_000; // PSA 2024 employed persons
+      const NATIONAL_AVG   = 18000;
+      const NCR_MIN_WAGE   = 645 * 22;
+      const PH_WORKFORCE   = 49_000_000;
 
-      // ── PERCENTILE ──
       const pct = getPercentile(gross);
       const topPct = (100 - pct).toFixed(1);
       document.getElementById('percentileHeadline').innerHTML =
@@ -1690,35 +1684,28 @@
       document.getElementById('percentileSub').textContent =
         `of the Philippine employed workforce by gross monthly income`;
 
-      // Animate fill bar (fill = how far along the population you are)
       setTimeout(() => {
         document.getElementById('percentileFill').style.width = pct + '%';
       }, 200);
 
-      // vs. national average
       const vsAvg = gross / NATIONAL_AVG;
       document.getElementById('pVsAvg').textContent =
         vsAvg >= 1 ? `${vsAvg.toFixed(1)}× above` : `${(vsAvg*100).toFixed(0)}% of avg`;
 
-      // vs. min wage
       const vsMin = gross / NCR_MIN_WAGE;
       document.getElementById('pVsMinWage').textContent = `${vsMin.toFixed(1)}× min wage`;
 
-      // workers earning less (estimate)
       const workersBehind = Math.round(PH_WORKFORCE * (pct / 100));
       document.getElementById('pWorkersBehind').textContent =
         workersBehind >= 1e6
           ? `~${(workersBehind/1e6).toFixed(1)}M people`
           : `~${(workersBehind/1e3).toFixed(0)}K people`;
 
-      // ── HOURLY RATE ──
       const hoursPerMonth = 8 * 22;
       const hourlyNet = netPay / hoursPerMonth;
       document.getElementById('metricHourly').textContent = fmt(hourlyNet) + '/hr';
 
-      // ── TAX FREEDOM DAY ──
       const annualGross = gross * 12;
-      const totalAnnualDeductions = annualTax + (netPay < gross ? (gross - netPay) * 12 : 0);
       const taxDayOfYear = Math.round((annualTax / (annualGross || 1)) * 365);
       const taxFreedomDate = new Date(new Date().getFullYear(), 0, 1 + taxDayOfYear);
       const monthNames = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
@@ -1727,31 +1714,26 @@
       document.getElementById('metricTaxDayDesc').textContent =
         `You work the first ${taxDayOfYear} days of the year (until ${monthNames[taxFreedomDate.getMonth()]} ${taxFreedomDate.getDate()}) just to pay your income tax.`;
 
-      // ── SAVINGS ──
       const monthlySavings = netPay * 0.20;
       document.getElementById('metricSavings').textContent = fmtCompact(monthlySavings * 12) + '/yr';
 
-      // ── MONTHS TO ₱1M ──
       const moToMillion = monthlySavings > 0 ? Math.ceil(1000000 / monthlySavings) : '∞';
       const moLabel = typeof moToMillion === 'number'
         ? (moToMillion > 120 ? `${(moToMillion/12).toFixed(1)} yrs` : `${moToMillion} months`)
         : '∞';
       document.getElementById('metricToMillion').textContent = moLabel;
 
-      // ── LIFESTYLE ──
       document.getElementById('lifeCoffee').textContent  = Math.floor(netPay / 195).toLocaleString();
       document.getElementById('lifeChicken').textContent = Math.floor(netPay / 79).toLocaleString();
       document.getElementById('lifeGas').textContent     = Math.floor(netPay / 64).toLocaleString();
       document.getElementById('lifeRent').textContent    = (netPay / 10000).toFixed(1) + 'x';
 
-      // ── SAVINGS TRAJECTORY (with 5% annual interest compounded monthly) ──
       const r = 0.05 / 12;
       function futureValue(mo) {
         if (r === 0) return monthlySavings * mo;
         return monthlySavings * ((Math.pow(1 + r, mo) - 1) / r);
       }
       const fv = [12, 36, 60, 120];
-      const labels = ['1 Year', '3 Years', '5 Years', '10 Years'];
       const ids = [1, 3, 5, 10];
       const maxFV = futureValue(120);
       const milestones = { 1e6: '₱1M', 5e6: '₱5M', 10e6: '₱10M', 50e6: '₱50M', 100e6: '₱100M' };
@@ -1764,7 +1746,6 @@
           document.getElementById(`trajBar${ids[i]}`).style.width = barPct + '%';
         }, 300 + i * 120);
 
-        // milestone note
         let note = '';
         for (const [threshold, label] of Object.entries(milestones)) {
           if (val >= parseFloat(threshold)) note = `${label}+ saved`;
@@ -1772,19 +1753,15 @@
         document.getElementById(`trajNote${ids[i]}`).textContent = note;
       });
 
-      // ── YOUR TAXES IN ACTION ──
-      // DepEd Teacher Salary Grade 11: ~₱27,000/mo
       const teacherSalary = 27000;
       const teacherMonths = annualTax > 0 ? Math.floor(annualTax / teacherSalary) : 0;
       document.getElementById('nationTeachers').textContent =
         teacherMonths > 0 ? `${teacherMonths}` : '<1';
 
-      // PhilHealth hospital bed-day coverage: ~₱2,500/day
       const bedDays = annualTax > 0 ? Math.floor(annualTax / 2500) : 0;
       document.getElementById('nationHospital').textContent =
         bedDays >= 1000 ? `${(bedDays/1000).toFixed(1)}K` : `${bedDays}`;
 
-      // DPWH barangay road: ~₱6,500/meter
       const roadMeters = annualTax > 0 ? Math.floor(annualTax / 6500) : 0;
       document.getElementById('nationRoad').textContent =
         roadMeters >= 1000 ? `${(roadMeters/1000).toFixed(1)}K` : `${roadMeters}`;
