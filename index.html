@@ -986,6 +986,40 @@
       line-height: 1.5;
     }
 
+    /* ── MOBILE FIX: section-meta-with-action ── */
+    @media (max-width: 540px) {
+      .section-meta-with-action {
+        flex-wrap: wrap;
+        align-items: center;
+        row-gap: 0;
+        column-gap: 10px;
+        margin-bottom: 20px;
+      }
+      /* Shrink label text + spacing so it fits on one line with the button */
+      .section-meta-with-action .section-label {
+        flex: 1 1 auto;
+        letter-spacing: 0.15em;
+        font-size: 11px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        /* leave room for the reset button beside it */
+        max-width: calc(100% - 90px);
+      }
+      /* Hide the decorative growing line — no space for it */
+      .section-meta-with-action .section-line {
+        display: none;
+      }
+      /* Compact button */
+      .section-meta-with-action .reset-btn {
+        flex-shrink: 0;
+        padding: 5px 10px;
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        gap: 4px;
+      }
+    }
+
     @keyframes fill-bar {
       from { width: 0; }
     }
