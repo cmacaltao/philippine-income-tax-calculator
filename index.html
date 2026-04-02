@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Philippine Tax Calculator 2025</title>
+  <title>Philippine Tax Calculator 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=DM+Mono:wght@300;400;500&family=Syncopate:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
@@ -1041,9 +1041,9 @@
 
     <!-- HEADER -->
     <header class="page-header">
-      <p class="page-eyebrow">BIR · TRAIN Law 2025</p>
+      <p class="page-eyebrow">BIR · TRAIN Law 2026</p>
       <h1 class="page-title">Philippine<br><em>Tax Calculator</em></h1>
-      <p class="page-desc">Compute your take-home pay under the 2025 TRAIN Law schedule. Enter your income details and mandatory contributions below.</p>
+      <p class="page-desc">Compute your take-home pay under the 2026 TRAIN Law schedule. Enter your income details and mandatory contributions below.</p>
     </header>
 
     <!-- ─────────────── INCOME DETAILS ─────────────── -->
@@ -1066,7 +1066,10 @@
             <button onclick="setIncome(15000)">Min Wage</button>
             <button onclick="setIncome(30000)">Average</button>
             <button onclick="setIncome(50000)">Mid-Level</button>
-            <button onclick="setIncome(80000)">Senior</button>
+            <button onclick="setIncome(90000)">Senior</button>
+            <button onclick="setIncome(150000)">Senior Lead</button>
+            <button onclick="setIncome(250000)">Executive</button>
+            <button onclick="setIncome(500000)">✨ Sana All ✨</button>
           </div>
         </div>
 
@@ -1813,7 +1816,7 @@
     /* ── INIT ── */
     setFrequency('monthly');
     const yr = new Date().getFullYear();
-    document.title = `Philippine Tax Calculator ${yr > 2024 ? '2025' : yr} `;
+    document.title = `Philippine Tax Calculator ${yr > 2025 ? '2026' : yr} `;
   </script>
 </body>
 </html>
