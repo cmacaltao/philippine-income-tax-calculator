@@ -1681,25 +1681,39 @@
     }
 
     function getPercentile(monthlyGross) {
-      const bands = [
-        { max: 5000,   pct: 8  },
-        { max: 8000,   pct: 18 },
-        { max: 10000,  pct: 28 },
-        { max: 13000,  pct: 40 },
-        { max: 16000,  pct: 52 },
-        { max: 20000,  pct: 62 },
-        { max: 25000,  pct: 70 },
-        { max: 30000,  pct: 76 },
-        { max: 40000,  pct: 82 },
-        { max: 50000,  pct: 86 },
-        { max: 70000,  pct: 90 },
-        { max: 100000, pct: 94 },
-        { max: 150000, pct: 97 },
-        { max: 300000, pct: 99 },
-        { max: Infinity, pct: 99.5 }
+      // Anchor points (income, cumulative percentile) used to interpolate
+      // a smooth, continuous curve instead of coarse discrete bands.
+      const points = [
+        { income: 0,       pct: 0 },
+        { income: 5000,    pct: 8 },
+        { income: 8000,    pct: 18 },
+        { income: 10000,   pct: 28 },
+        { income: 13000,   pct: 40 },
+        { income: 16000,   pct: 52 },
+        { income: 20000,   pct: 62 },
+        { income: 25000,   pct: 70 },
+        { income: 30000,   pct: 76 },
+        { income: 40000,   pct: 82 },
+        { income: 50000,   pct: 86 },
+        { income: 70000,   pct: 90 },
+        { income: 100000,  pct: 94 },
+        { income: 150000,  pct: 97 },
+        { income: 300000,  pct: 99 },
+        { income: 1000000, pct: 99.8 },
+        { income: 5000000, pct: 99.97 }
       ];
-      const band = bands.find(b => monthlyGross <= b.max);
-      return band ? band.pct : 99.5;
+
+      if (monthlyGross <= 0) return 0;
+      if (monthlyGross >= points[points.length - 1].income) return 99.99;
+
+      for (let i = 0; i < points.length - 1; i++) {
+        const a = points[i], b = points[i + 1];
+        if (monthlyGross <= b.income) {
+          const ratio = (monthlyGross - a.income) / (b.income - a.income);
+          return a.pct + ratio * (b.pct - a.pct);
+        }
+      }
+      return 99.99;
     }
 
     function fmtCompact(n) {
@@ -1715,7 +1729,7 @@
       const PH_WORKFORCE   = 49_000_000;
 
       const pct = getPercentile(gross);
-      const topPct = (100 - pct).toFixed(1);
+      const topPct = (100 - pct).toFixed(2);
       document.getElementById('percentileHeadline').innerHTML =
         `You are in the <em>top ${topPct}%</em>`;
       document.getElementById('percentileSub').textContent =
